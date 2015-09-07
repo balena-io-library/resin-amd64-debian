@@ -3,7 +3,7 @@
 ## Description
 This is the base image for the x86_64 device. Contains both wheezy and jessie tags. As this is a base image there is no Dockerfile from which it was created. For more details about resin/amd64-debian, see [here][resin-base-images].
 
-resin/amd64-debian is built weekly from this repository. For more details about available tags, see [dockerhub][i386-dockerhub-link].
+resin/amd64-debian is built weekly from this repository. For more details about available tags, see [dockerhub][amd64-dockerhub-link].
 
 ## Contribute
 
