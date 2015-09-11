@@ -18,8 +18,8 @@ for suite in $SUITES; do
 	
 	# Upload to S3 (using AWS CLI)
 	printf "$ACCESS_KEY\n$SECRET_KEY\n$REGION_NAME\n\n" | aws configure
-	aws s3 cp $suite s3://$BUCKET_NAME/image_info/i386-debian/$suite/
-	aws s3 cp $suite s3://$BUCKET_NAME/image_info/i386-debian/$suite/$suite_$date
+	aws s3 cp $suite s3://$BUCKET_NAME/image_info/amd64-debian/$suite/
+	aws s3 cp $suite s3://$BUCKET_NAME/image_info/amd64-debian/$suite/$suite_$date
 	rm -f $suite
 	
 	docker tag -f $REPO:$suite $REPO:$suite-$date
