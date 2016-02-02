@@ -31,6 +31,7 @@ docker push $REPO
 # Clean up unnecessary docker images after pushing
 if [ $? -eq 0 ]; then
 	for suite in $SUITES; do
+		docker rmi -f $REPO:$suite
 		docker rmi -f $REPO:$suite-$date
 	done
 fi
